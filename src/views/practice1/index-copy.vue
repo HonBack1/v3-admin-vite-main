@@ -147,7 +147,7 @@ const hangeleReset = (ruleRef) => {
     <el-card>
       <el-button plain @click="addData">添加</el-button>
       <!-- 表格 -->
-      <TableData v-model="tableData" @handleCheck="handleCheck" @handleEdit="handleEdit" @handleDelete="handleDelete" />
+      <TableData />
       <!-- 分页 -->
       <div class="example-pagination-block">
         <el-pagination

@@ -38,6 +38,7 @@ const handleCreateOrUpdate = () => {
     const api = formData.value.id === undefined ? createTableDataApi : updateTableDataApi
     api(formData.value)
       .then(() => {
+        // console.log(formData.value, "1111")
         ElMessage.success("操作成功")
         dialogVisible.value = false
         getTableData()
@@ -89,7 +90,7 @@ const searchData = reactive({
 console.log("searchData.createTime:", searchData.createTime)
 const getTableData = () => {
   loading.value = true
-  let aa = {
+  const aa = {
     currentPage: paginationData.currentPage,
     size: paginationData.pageSize,
     username: searchData.username || undefined,
